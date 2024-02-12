@@ -37,8 +37,45 @@ class _MyHomePageState extends State<MyHomePage> {
         return Expanded(
           child: AlertDialog(
             backgroundColor: Theme.of(context).primaryColor,
-            title: const Text('Alert Dialog'),
-            content: const Text('This is a Simple Flutter App Alert Dialog'),
+            //icon: const Icon(Icons.notifications_active),
+            title: const Text(
+              'Alert Dialog',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+              ),
+            ),
+            content: const Text(
+              'This is a Simple Flutter App Alert Dialog.',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.white,
+              ),
+            ),
+            actions: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text(
+                  'No',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text(
+                  'Yes',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
           ),
         );
       },
